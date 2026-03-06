@@ -618,7 +618,7 @@
 
   <!-- NAV -->
   <nav>
-    <a class="nav-logo" href="#">hamlarper.xyz</a>
+    <a class="nav-logo" href="#">hamlarper.us</a>
     <button class="nav-cta" id="navCopyBtn" onclick="copyNavIP()">⧉ Copy IP</button>
   </nav>
 
@@ -631,7 +631,7 @@
 
     <h1>we <a href="https://www.urbandictionary.com/define.php?term=Larping" target="_blank" style="color:var(--accent);text-decoration:underline;text-underline-offset:6px;">larp</a> hams</h1>
 
-    <p>A custom modded experience with a community you'll love. Explore, build, and survive together on hamlarper.xyz.</p>
+    <p>A custom modded experience with a community you'll love. Explore, build, and survive together on hamlarper.us.</p>
 
     <div class="hero-actions">
       <a href="#modpack" class="btn-primary">
@@ -644,7 +644,7 @@
 
     <div class="ip-box">
       <span class="ip-label">Server IP</span>
-      <span class="ip-value" id="ip-text">hamlarper.xyz</span>
+      <span class="ip-value" id="ip-text">play.hamlarper.us</span>
       <button class="ip-copy" id="copyBtn" title="Copy IP" onclick="copyIP()">⧉</button>
     </div>
   </div>
@@ -713,7 +713,7 @@
           <div class="step-num">4</div>
           <div class="step-body">
             <h4>Add the server &amp; play</h4>
-            <p>In Multiplayer, add <code>hamlarper.xyz</code> as a server and join. That's it!</p>
+            <p>In Multiplayer, add <code>play.hamlarper.us</code> as a server and join. That's it!</p>
           </div>
         </div>
       </div>
@@ -727,7 +727,7 @@
     <div style="display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;flex-wrap:wrap;" class="fade-in">
       <div class="join-banner" style="height:100%;">
         <h2>Ready to play?</h2>
-        <p>Join ones of players on hamlarper.xyz right now.</p>
+        <p>Join ones of players on hamlarper.us right now.</p>
         <a href="https://discord.gg/WFbbJkwbc5" target="_blank" style="display:inline-flex;align-items:center;gap:0.5rem;margin-bottom:1.5rem;background:rgba(126,203,95,0.08);border:1px solid rgba(126,203,95,0.3);border-radius:8px;padding:0.75rem 1.25rem;color:var(--accent);font-size:0.85rem;text-decoration:none;font-family:'Space Mono',monospace;transition:background 0.2s;" onmouseover="this.style.background='rgba(126,203,95,0.15)'" onmouseout="this.style.background='rgba(126,203,95,0.08)'">
           📢 Please vote in the Discord on how modded the next server will be →
         </a>
@@ -764,17 +764,17 @@
 
   <!-- FOOTER -->
   <footer>
-    <button onclick="copyFooterIP()" id="footerCopyBtn" style="background:none;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:0.85rem;color:var(--accent);font-weight:700;">hamlarper.xyz</button>
+    <button onclick="copyFooterIP()" id="footerCopyBtn" style="background:none;border:none;cursor:pointer;font-family:'Space Mono',monospace;font-size:0.85rem;color:var(--accent);font-weight:700;">play.hamlarper.us</button>
     <p>Not affiliated with Mojang or Microsoft.</p>
     <p>© 2026 HamLarper</p>
   </footer>
 
   <script>
     function copyFooterIP() {
-      navigator.clipboard.writeText('hamlarper.xyz').then(() => {
+      navigator.clipboard.writeText('play.hamlarper.us').then(() => {
         const btn = document.getElementById('footerCopyBtn');
         btn.textContent = '✓ Copied!';
-        setTimeout(() => { btn.textContent = 'hamlarper.xyz'; }, 2000);
+        setTimeout(() => { btn.textContent = 'play.hamlarper.us'; }, 2000);
       });
     }
 
@@ -783,31 +783,31 @@
       const dot = document.getElementById('statusDot');
       const text = document.getElementById('statusText');
       try {
-        const res = await fetch('https://api.mcsrvstat.us/3/hamlarper.xyz');
+        const res = await fetch('https://api.mcsrvstat.us/3/play.hamlarper.us');
         const data = await res.json();
         if (data.online) {
           dot.style.background = 'var(--accent)';
           dot.style.boxShadow = '0 0 8px var(--accent)';
           const players = data.players ? `${data.players.online}/${data.players.max} players` : '';
-          text.textContent = `Server Online · ${players ? players + ' · ' : ''}hamlarper.xyz`;
+          text.textContent = `Server Online · ${players ? players + ' · ' : ''}play.hamlarper.us`;
         } else {
           dot.style.background = '#e05555';
           dot.style.boxShadow = '0 0 8px #e05555';
           dot.style.animation = 'none';
-          text.textContent = 'Server Offline · hamlarper.xyz';
+          text.textContent = 'Server Offline · play.hamlarper.us';
         }
       } catch (e) {
         dot.style.background = '#e0a855';
         dot.style.boxShadow = '0 0 8px #e0a855';
         dot.style.animation = 'none';
-        text.textContent = 'Status Unknown · hamlarper.xyz';
+        text.textContent = 'Status Unknown · play.hamlarper.us';
       }
     }
     checkServerStatus();
 
     // ── COPY IP (nav) ──
     function copyNavIP() {
-      navigator.clipboard.writeText('hamlarper.xyz').then(() => {
+      navigator.clipboard.writeText('play.hamlarper.us').then(() => {
         const btn = document.getElementById('navCopyBtn');
         btn.textContent = '✓ Copied!';
         setTimeout(() => { btn.textContent = '⧉ Copy IP'; }, 2000);
@@ -816,7 +816,7 @@
 
     // ── COPY IP ──
     function copyIP() {
-      navigator.clipboard.writeText('hamlarper.xyz').then(() => {
+      navigator.clipboard.writeText('play.hamlarper.us').then(() => {
         const btn = document.getElementById('copyBtn');
         btn.textContent = '✓';
         btn.classList.add('copied');
